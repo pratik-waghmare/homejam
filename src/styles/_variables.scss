@@ -1,0 +1,38 @@
+@import "./media_queries";
+
+// Typography
+$openSans: "Open Sans", sans-serif;
+$nunito: "Nunito", sans-serif;
+$libre: "Libre Baskerville", serif;
+$rubik: "Rubik", sans-serif;
+$quattrocento: "Quattrocento", serif;
+
+// Font Wieghts
+$openSans-400: 400;
+$nunito-400: 400;
+$nunito-600: 600;
+$libre-400: 400;
+$libre-700: 700;
+$rubik-400: 400;
+$quattrocento-700: 700;
+
+// Colors
+$clrLight: #fff;
+$clrBlue--light: #0259eb;
+$clrBlue--dark: #111229;
+$clrBlue--darker: #0a0b1a;
+$clrYellow--light: #e5c558;
+$clrYellow--dark: #e5af56;
+$clrBrown: #682f26;
+
+// Gradients
+$gradientHero: linear-gradient(
+  180deg,
+  rgba(5, 11, 20, 0.28) 0%,
+  rgba(1, 13, 32, 0.69) 67.53%,
+  #0a0b1a 85.33%
+);
+
+$gradientShowCard: linear-gradient(163.41deg, #301a68 0.11%, #234c97 170.69%);
+
+$gradientReviewCard: linear-gradient(143.63deg, #276c73 5.43%, #5293e8 110.6%);

@@ -1,0 +1,184 @@
+@import "./../styles/variables";
+
+// -------------------------------
+//   Utility Classes
+// -------------------------------
+
+section {
+  // Padding on different devices
+  padding: 1em;
+
+  @include mobile {
+    padding: 1em 1.5em;
+  }
+
+  @include tablet-and-up {
+    padding: 1em 3em;
+  }
+
+  @include desktop-and-up {
+    padding: 1.5em 8.75em;
+  }
+}
+
+//--------------- z-index  ---------------------
+.Hero__labelContainer,
+.Shows__content,
+.Reviews__content {
+  z-index: 10;
+}
+
+// -------------------------------
+//   Hero Section
+// -------------------------------
+
+.Hero {
+  background: $gradientHero, url("../assets/images/Hero-mobile.jpg");
+  background-size: cover;
+  height: 100vh;
+  max-height: 862px;
+  color: $clrLight;
+
+  @include tablet-and-up {
+    background: $gradientHero, url("../assets/images/Hero.jpg");
+  }
+}
+
+.Hero__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 70%;
+
+  & .heading {
+    font-family: $libre;
+    font-weight: $libre-700;
+    font-size: 2.5rem;
+
+    @include tablet-and-up {
+      font-size: 4rem;
+    }
+  }
+
+  & .subHeading {
+    font-size: 1.125rem;
+    opacity: 0.6;
+    max-width: 610px;
+
+    @include tablet-and-up {
+      font-size: 1.5rem;
+    }
+  }
+}
+
+.Hero__labelContainer {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+
+  &::-webkit-scrollbar {
+    width: 0px;
+  }
+
+  @include tablet-and-up {
+    justify-content: center;
+    gap: 2em;
+  }
+}
+
+// -------------------------------
+//   Shows & Reviews Section ( Common Elements )
+// -------------------------------
+
+.Shows,
+.Reviews {
+  background: $clrBlue--darker;
+  width: 100%;
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    & .heading {
+      font-family: $libre;
+      font-weight: $libre-400;
+      font-size: 1.25rem; // 20px
+      padding-bottom: 0.2em;
+      position: relative; // Section Heading
+
+      @include tablet-and-up {
+        font-size: 2rem; // 32px
+      }
+
+      &:after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        background: $clrBlue--light;
+        width: 48px;
+        height: 3px;
+        border-radius: 16px;
+      }
+    }
+
+    & .label {
+      font-weight: $nunito-600;
+      color: $clrYellow--light;
+      font-size: 0.875rem; // 14px
+
+      @include tablet-and-up {
+        font-size: 1rem; // 14px
+      }
+    }
+  }
+}
+
+//   Reviews Header
+
+.Reviews {
+  & .label {
+    color: $clrLight;
+    opacity: 0.8;
+  }
+
+  & .label span {
+    color: $clrLight;
+    opacity: 0.5;
+  }
+
+  & .pageNumber {
+    display: inline-block;
+  }
+
+  & .label .pageChangeIcons {
+    display: inline-flex;
+    gap: 1em;
+    margin-left: 1.5em;
+  }
+}
+
+//   Shows & Review Cards Section ( Common Elements )
+
+.Shows,
+.Reviews {
+  &__content {
+    padding: 2.5em 0;
+    display: flex;
+    gap: 2em;
+    width: 100%;
+    position: relative;
+
+    &::-webkit-scrollbar {
+      width: 0px;
+    }
+  }
+}
+
+.Hero__labelContainer,
+.Shows__content,
+.Reviews__content {
+  overflow-x: auto;
+  overflow-y: hidden;
+}

@@ -1,10 +1,13 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 
-import Logo from "./../assets/images/logo.png";
-import "./Navbar.scss";
+import Logo from './../assets/images/logo.png';
+import './Navbar.scss';
+
+// --------------- NavLink ----------------------
 
 function NavLink(props) {
+  // ------ Toggle Button -----
   if (props.link.isToggle) {
     return (
       <li>
@@ -18,7 +21,8 @@ function NavLink(props) {
     );
   }
 
-  if (props.link.type === "icon-link") {
+  // ------ Icon Link -----
+  if (props.link.type === 'icon-link') {
     return (
       <li>
         <Link to={props.link.url} className="icon--link">
@@ -32,7 +36,8 @@ function NavLink(props) {
     );
   }
 
-  if (props.link.type === "icon-text-link") {
+  // ------ Icon Text Link -----
+  if (props.link.type === 'icon-text-link') {
     return (
       <li>
         <Link to={props.link.url} className="icon--text--link">
@@ -43,6 +48,7 @@ function NavLink(props) {
     );
   }
 
+  // ------ Text Link -----
   return (
     <li>
       <Link
@@ -55,12 +61,14 @@ function NavLink(props) {
   );
 }
 
+// --------------- Sidebar ----------------------
+
 function Sidebar({ isOpen, iconLinks, sidebarLinks, toggleHandler }) {
-  const linkWrapperClasses = ["linkWrapper"];
+  const linkWrapperClasses = ['linkWrapper'];
   if (isOpen) {
-    linkWrapperClasses.push("open");
+    linkWrapperClasses.push('open');
   } else {
-    linkWrapperClasses.push("close");
+    linkWrapperClasses.push('close');
   }
 
   return (
@@ -78,8 +86,11 @@ function Sidebar({ isOpen, iconLinks, sidebarLinks, toggleHandler }) {
           ))}
         </ul>
       </div>
+
+      {/* ------ Sidebar Links ----- */}
+
       {isOpen && (
-        <div className={linkWrapperClasses.join(" ")}>
+        <div className={linkWrapperClasses.join(' ')}>
           <ul>
             {sidebarLinks.map((link) => (
               <NavLink link={link} toggleHandler={toggleHandler} />
@@ -90,6 +101,8 @@ function Sidebar({ isOpen, iconLinks, sidebarLinks, toggleHandler }) {
     </div>
   );
 }
+
+// --------------- Navbar ----------------------
 
 function Navbar({ sidebarLinks, navbarLinks, iconLinks }) {
   const [isOpen, setIsOpen] = useState(false);

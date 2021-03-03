@@ -1,4 +1,4 @@
-@import "./../styles/variables";
+@import './../styles/variables';
 
 .ShowCard {
   position: relative;
@@ -16,7 +16,7 @@
 }
 
 .ShowCard::after {
-  content: "";
+  content: '';
   display: block;
   position: absolute;
   z-index: -1;
@@ -78,19 +78,19 @@
 
   & .ticket {
     position: relative;
-    background-image: url("../assets/icons/ticket-icon.svg");
+    background-image: url('../assets/icons/ticket-icon.svg');
     background-size: cover;
     width: 20px;
     height: 26px;
     margin: 0px 0.75em;
 
     &:hover {
-      background-image: url("../assets/icons/ticket-clicked-icon.svg");
+      background-image: url('../assets/icons/ticket-clicked-icon.svg');
     }
   }
 
   & .ticket::before {
-    content: "";
+    content: '';
     position: absolute;
     height: 100%;
     width: 1px;

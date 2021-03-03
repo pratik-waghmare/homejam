@@ -1,4 +1,4 @@
-@import "./../styles/variables";
+@import './../styles/variables';
 
 // -------------------------------
 //   Utility Classes
@@ -33,14 +33,14 @@ section {
 // -------------------------------
 
 .Hero {
-  background: $gradientHero, url("../assets/images/Hero-mobile.jpg");
+  background: $gradientHero, url('../assets/images/Hero-mobile-min.jpg');
   background-size: cover;
   height: 100vh;
   max-height: 862px;
   color: $clrLight;
 
   @include tablet-and-up {
-    background: $gradientHero, url("../assets/images/Hero.jpg");
+    background: $gradientHero, url('../assets/images/Hero-min.jpg');
   }
 }
 
@@ -112,7 +112,7 @@ section {
       }
 
       &:after {
-        content: "";
+        content: '';
         position: absolute;
         bottom: 0;
         left: 0;

@@ -1,16 +1,19 @@
-import React from "react";
-import ProgressLabel from "./../components/ProgressLabel";
-import ShowCard from "./../components/ShowCard";
-import ReviewCard from "./../components/ReviewCard";
+import React from 'react';
 
-import { performers, reviews, icons, labelInfo } from "./Data";
-import "./Homepage.scss";
+import ProgressLabel from './../components/ProgressLabel';
+import ShowCard from './../components/ShowCard';
+import ReviewCard from './../components/ReviewCard';
+
+import { performers, reviews, icons, labelInfo } from './Data';
+import './Homepage.scss';
 
 function Homepage() {
-  console.log("https://www.pratikwaghmare.space");
+  console.log('https://www.pratikwaghmare.space');
 
   return (
     <div className="HomePage">
+      {/* -------------------- Hero Section ---------------------- */}
+
       <section className="Hero">
         <div className="Hero__container">
           <h1 className="heading">Cari Cari</h1>
@@ -25,6 +28,9 @@ function Homepage() {
           ))}
         </div>
       </section>
+
+      {/* -------------------- Shows Section ---------------------- */}
+
       <section className="Shows">
         <div className="Shows__header">
           <h1 className="heading">Upcoming Shows</h1>
@@ -38,6 +44,9 @@ function Homepage() {
           ))}
         </div>
       </section>
+
+      {/* -------------------- Reviews Section ---------------------- */}
+
       <section className="Reviews">
         <div className="Shows__header">
           <h1 className="heading">Reviews</h1>

@@ -1,4 +1,4 @@
-@import "./../styles/variables";
+@import './../styles/variables';
 
 //--------------- Utility classes  ---------------------
 nav,
@@ -27,10 +27,6 @@ nav,
 
 .Sidebar .header {
   z-index: 1000;
-}
-
-.Sidebar .Overlay {
-  // z-index: 90;
 }
 
 .Sidebar .linkWrapper {
@@ -86,6 +82,7 @@ nav,
     display: none;
   }
 }
+
 //--------------- Navbar  ---------------------
 
 .Navbar {
@@ -116,9 +113,6 @@ nav,
 //--------------- Sidebar ---------------------
 
 .Sidebar {
-  // display: flex;
-  // flex-direction: column;
-
   @include laptop-and-up {
     display: none;
   }
@@ -147,7 +141,6 @@ nav,
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  // z-index: 1030;
 }
 
 .Sidebar .header ul {

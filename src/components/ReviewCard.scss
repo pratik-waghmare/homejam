@@ -1,4 +1,4 @@
-@import "./../styles/variables";
+@import './../styles/variables';
 
 .ReviewCard {
   position: relative;
@@ -10,15 +10,15 @@
   max-width: 22.5em; // 360px
   display: grid;
   grid-template-areas:
-    "profile-image header"
-    "desc desc";
+    'profile-image header'
+    'desc desc';
   grid-template-columns: 1fr 5fr;
   padding: 1em;
   row-gap: 1.25em;
 }
 
 .ReviewCard::after {
-  content: "";
+  content: '';
   display: block;
   position: absolute;
   z-index: -1;
@@ -30,7 +30,7 @@
   border-radius: 8px;
 }
 
-.ReviewCard img {
+.ReviewCard > img {
   grid-area: profile-image;
   width: 48px;
   height: 48px;
@@ -47,12 +47,24 @@
     font-weight: $quattrocento-700;
     font-size: 1rem;
   }
+}
+
+// ---------------- City Section ------------------
+
+.ReviewCard .city__wrapper {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
 
   & .city {
     font-family: $rubik;
     font-weight: $rubik-400;
     font-size: 0.75rem;
     color: $clrYellow--dark;
+  }
+
+  & .city img {
+    height: 24px;
   }
 }
 
